@@ -182,9 +182,9 @@ const PackageTabs = () => {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Version</TableHead>
-                <TableHead className="w-[140px]">Published On</TableHead>
-                <TableHead className="w-[142px]"></TableHead>
+                <TableHead className="text-muted-foreground">Version</TableHead>
+                <TableHead className="w-[140px] text-muted-foreground">Published On</TableHead>
+                <TableHead className="w-[142px] text-muted-foreground"></TableHead>
               </TableRow>
             </TableHeader>
 
@@ -214,9 +214,9 @@ const PackageTabs = () => {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>License ID</TableHead>
-                <TableHead className="w-[300px]">License Name</TableHead>
-                <TableHead className="w-[400px]">Reference URL</TableHead>
+                <TableHead className="text-muted-foreground">License ID</TableHead>
+                <TableHead className="w-[300px] text-muted-foreground">License Name</TableHead>
+                <TableHead className="w-[400px] text-muted-foreground">Reference URL</TableHead>
               </TableRow>
             </TableHeader>
 
