@@ -90,7 +90,7 @@ export default async function PackagePage({ params }: PageProps) {
     : undefined;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 border border-gray-200 rounded-sm overflow-hidden">
       <PackageHeader
         name={decodedName}
         version={decodedVersion}
