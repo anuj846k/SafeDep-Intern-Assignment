@@ -59,9 +59,7 @@ const PackageHeader = ({
             icon={<MdOutlineBugReport />}
             label="Vulnerabilities"
             value={String(vulnerabilitiesCount)}
-            iconClassName={
-              vulnerabilitiesCount > 0 ? "text-destructive" : "text-green-500"
-            }
+            iconClassName="text-destructive"
           />
 
           <MetricCard
