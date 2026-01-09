@@ -22,8 +22,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Button className="flex items-center gap-2">
-          <FaGithub />
+        <Button className="flex items-center gap-2 rounded-sm py-2 px-4">
+          <FaGithub size={16} />
           Install GitHub App
         </Button>
       </div>

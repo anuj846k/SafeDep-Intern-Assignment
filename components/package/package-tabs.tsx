@@ -77,7 +77,7 @@ const PackageTabs = ({
         </TabsList>
       </div>
 
-      <TabsContent value="overview" className="bg-white">
+      <TabsContent value="overview" className="bg-white min-h-screen">
         <div className="flex flex-col h-full w-[800px] mx-auto gap-6 py-6 ">
           <SectionBlock
             title="Dependencies"
@@ -134,15 +134,15 @@ const PackageTabs = ({
                 value:
                   vulnerabilities.length > 0
                     ? `⚠️ This package has ${vulnerabilities.length} known vulnerabilities.`
-                    : "✅ No known vulnerabilities found for this package version.",
+                    : "No known vulnerabilities found for this package version.",
               },
             ]}
           />
         </div>
       </TabsContent>
 
-      <TabsContent value="vulnerabilities">
-        <div className=" bg-white">
+      <TabsContent value="vulnerabilities" className="bg-white min-h-screen">
+        <div>
           {vulnerabilities.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground">
               No vulnerabilities found for this package version.
@@ -188,8 +188,8 @@ const PackageTabs = ({
         </div>
       </TabsContent>
 
-      <TabsContent value="versions">
-        <div className="bg-white w-full">
+      <TabsContent value="versions" className="bg-white min-h-screen">
+        <div className="w-full">
           {versions.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground">
               No version information available.
@@ -238,8 +238,8 @@ const PackageTabs = ({
         </div>
       </TabsContent>
 
-      <TabsContent value="license">
-        <div className="bg-white w-full">
+      <TabsContent value="license" className="bg-white min-h-screen">
+        <div className="w-full">
           {licenses.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground">
               No license information available.
