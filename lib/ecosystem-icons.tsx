@@ -20,21 +20,3 @@ export function getEcosystemIcon(ecosystem: string): React.ReactNode {
 
   return icons[ecosystem.toLowerCase()] || <FaGithub size={16} />;
 }
-
-export function getEcosystemColor(ecosystem: string): string {
-  const colors: Record<string, string> = {
-    npm: "text-red-500",
-    pypi: "text-yellow-500",
-    go: "text-cyan-500",
-    maven: "text-orange-500",
-    cargo: "text-orange-600",
-    nuget: "text-blue-500",
-    rubygems: "text-red-600",
-    packagist: "text-orange-400",
-    vscode: "text-blue-600",
-    openvsx: "text-purple-500",
-    github_repository: "text-gray-700",
-  };
-
-  return colors[ecosystem.toLowerCase()] || "text-gray-500";
-}

@@ -1,4 +1,4 @@
-import { getEcosystemIcon } from "@/lib/utils/ecosystem-icons";
+import { getEcosystemIcon } from "@/lib/ecosystem-icons";
 import { FiBook } from "react-icons/fi";
 import { HiGlobeAsiaAustralia } from "react-icons/hi2";
 import { IoMdInformationCircleOutline } from "react-icons/io";
