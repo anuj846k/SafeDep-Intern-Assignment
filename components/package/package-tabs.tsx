@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 import { Badge } from "../ui/badge";
 import {
   Table,
@@ -19,52 +20,44 @@ type Vulnerability = {
   modified: string;
 };
 
-const vulnerabilities: Vulnerability[] = [
-  {
-    id: "GHSA-9hjg-9r4m-mvj7",
-    summary:
-      "Requests vulnerable to .netrc credentials leak via malicious URLs",
-    risk: "low",
-    published: "08/10/2024",
-    modified: "08/13/2024",
-  },
-  {
-    id: "GHSA-9hjg-9rem-mvj7",
-    summary:
-      "Requests vulnerable to .netrc credentials leak via malicious URLs",
-    risk: "medium",
-    published: "08/10/2024",
-    modified: "08/13/2024",
-  },
-  {
-    id: "GHSA-9hjg-9r2m-mvj7",
-    summary:
-      "Requests vulnerable to .netrc credentials leak via malicious URLs",
-    risk: "high",
-    published: "08/10/2024",
-    modified: "08/13/2024",
-  },
-  {
-    id: "GHSA-9hjg-924m-mvj7",
-    summary:
-      "Requests vulnerable to .netrc credentials leak via malicious URLs",
-    risk: "critical",
-    published: "08/10/2024",
-    modified: "08/13/2024",
-  },
-  {
-    id: "GHSA-9hjg-914m-mvj7",
-    summary:
-      "Requests vulnerable to .netrc credentials leak via malicious URLs",
-    published: "08/10/2024",
-    modified: "08/13/2024",
-    risk: "unspecified",
-  },
-];
+type AvailableVersion = {
+  version: string;
+  publishedAt: string;
+  isDefault: boolean;
+};
 
-const PackageTabs = () => {
+type License = {
+  licenseId: string;
+  name: string;
+  referenceUrl: string;
+};
+
+type Dependency = {
+  name: string;
+  version: string;
+  ecosystem: string;
+};
+
+type PackageTabsProps = {
+  vulnerabilities: Vulnerability[];
+  versions: AvailableVersion[];
+  licenses: License[];
+  dependencies: Dependency[];
+  ecosystem: string;
+  packageName: string;
+};
+
+const PackageTabs = ({
+  vulnerabilities,
+  versions,
+  licenses,
+  dependencies,
+  ecosystem,
+  packageName,
+}: PackageTabsProps) => {
   const triggerClass =
     "text-sm font-medium leading-5 text-muted-foreground data-[state=active]:bg-white data-[state=active]:text-foreground data-[state=active]:rounded-md data-[state=active]:shadow-xs data-[state=active]:border-none";
+
   return (
     <Tabs defaultValue="overview" className="gap-0">
       <div className="w-full bg-background border-border border-b px-4 py-2">
@@ -73,10 +66,10 @@ const PackageTabs = () => {
             Overview
           </TabsTrigger>
           <TabsTrigger value="vulnerabilities" className={triggerClass}>
-            Vulnerabilities
+            Vulnerabilities ({vulnerabilities.length})
           </TabsTrigger>
           <TabsTrigger value="versions" className={triggerClass}>
-            Versions
+            Versions ({versions.length})
           </TabsTrigger>
           <TabsTrigger value="license" className={triggerClass}>
             License
@@ -87,48 +80,61 @@ const PackageTabs = () => {
       <TabsContent value="overview" className="bg-white">
         <div className="flex flex-col h-full w-[800px] mx-auto gap-6 py-6 ">
           <SectionBlock
-            title="Summary"
+            title="Dependencies"
             accent="primary"
-            blocks={[
-              {
-                type: "text",
-                value:
-                  "This analysis was performed using vet and SafeDep Cloud Malicious Package Analysis. Integrate with GitHub using vet-action GitHub Action.",
-              },
-              {
-                type: "note",
-                value: "This report is updated by a verification record",
-              },
-
-              {
-                type: "text",
-                value:
-                  "Multiple files flagged for potential data exfiltration, XSS, and RCE vulnerabilities. High confidence of malicious intent due to combined factors.",
-              },
-            ]}
+            blocks={
+              dependencies.length > 0
+                ? [
+                    {
+                      type: "text",
+                      value: `This package has ${dependencies.length} direct dependencies.`,
+                    },
+                  ]
+                : [
+                    {
+                      type: "note",
+                      value: "No dependencies found for this package.",
+                    },
+                  ]
+            }
           />
 
-          <SectionBlock
-            title="Verification Record"
-            blocks={[
-              {
-                type: "text",
-                value: "Manual analysis confirmed that the package is clean.",
-              },
-            ]}
-          />
+          {dependencies.length > 0 && (
+            <div className="bg-white border rounded-lg p-4">
+              <h3 className="text-sm font-medium mb-3">Direct Dependencies</h3>
+              <div className="flex flex-wrap gap-2">
+                {dependencies.slice(0, 20).map((dep, idx) => (
+                  <Link
+                    key={idx}
+                    href={`/p/${ecosystem}/${dep.name}/${dep.version}`}
+                    className="hover:opacity-80"
+                  >
+                    <Badge
+                      variant="outline"
+                      className="text-xs hover:bg-slate-100"
+                    >
+                      {dep.name}@{dep.version}
+                    </Badge>
+                  </Link>
+                ))}
+                {dependencies.length > 20 && (
+                  <Badge variant="secondary" className="text-xs">
+                    +{dependencies.length - 20} more
+                  </Badge>
+                )}
+              </div>
+            </div>
+          )}
 
           <SectionBlock
-            title="Details"
+            title="Security Summary"
             blocks={[
               {
-                type: "note",
-                value: "Note: This report is updated by a verification record",
-              },
-              {
-                type: "text",
+                type: vulnerabilities.length > 0 ? "note" : "text",
                 value:
-                  "The package exhibits multiple concerning behaviors. Several files match the 'sys_net_recon_exfil' YARA rule, suggesting potential system and network information exfiltration. Additionally, the code constructs javascript: URLs and assigns them to formAction attributes, which can lead to XSS or RCE if user-controlled data is involved. Furthermore, dynamic code execution is possible via formatDynamicImportPath if the cacheHandlers configuration is compromised. These factors, combined, indicate malicious intent.",
+                  vulnerabilities.length > 0
+                    ? `⚠️ This package has ${vulnerabilities.length} known vulnerabilities.`
+                    : "✅ No known vulnerabilities found for this package version.",
               },
             ]}
           />
@@ -137,101 +143,149 @@ const PackageTabs = () => {
 
       <TabsContent value="vulnerabilities">
         <div className=" bg-white">
-          <Table className="table-fixed">
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-sm w-[380px] text-muted-foreground leading-5 whitespace-nowrap">
-                  Vulnerability ID
-                </TableHead>
-                <TableHead className="text-sm w-[360px] text-muted-foreground leading-5">
-                  Summary
-                </TableHead>
-                <TableHead className="text-sm w-[110px] text-muted-foreground leading-5">
-                  Risk
-                </TableHead>
-                <TableHead className="text-sm w-[115px] text-muted-foreground leading-5">
-                  Published
-                </TableHead>
-                <TableHead className="text-sm w-[115px] text-muted-foreground leading-5">
-                  Modified
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {vulnerabilities.map((vuln) => (
-                <TableRow key={vuln.id}>
-                  <TableCell className="whitespace-nowrap">{vuln.id}</TableCell>
-
-                  <TableCell className="truncate">{vuln.summary}</TableCell>
-
-                  <TableCell>
-                    <RiskBadge level={vuln.risk} />
-                  </TableCell>
-
-                  <TableCell>{vuln.published}</TableCell>
-                  <TableCell>{vuln.modified}</TableCell>
+          {vulnerabilities.length === 0 ? (
+            <div className="p-8 text-center text-muted-foreground">
+              No vulnerabilities found for this package version.
+            </div>
+          ) : (
+            <Table className="table-fixed">
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-sm w-[380px] text-muted-foreground leading-5 whitespace-nowrap">
+                    Vulnerability ID
+                  </TableHead>
+                  <TableHead className="text-sm w-[360px] text-muted-foreground leading-5">
+                    Summary
+                  </TableHead>
+                  <TableHead className="text-sm w-[110px] text-muted-foreground leading-5">
+                    Risk
+                  </TableHead>
+                  <TableHead className="text-sm w-[115px] text-muted-foreground leading-5">
+                    Published
+                  </TableHead>
+                  <TableHead className="text-sm w-[115px] text-muted-foreground leading-5">
+                    Modified
+                  </TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {vulnerabilities.map((vuln) => (
+                  <TableRow key={vuln.id}>
+                    <TableCell className="whitespace-nowrap">
+                      {vuln.id}
+                    </TableCell>
+                    <TableCell className="truncate">{vuln.summary}</TableCell>
+                    <TableCell>
+                      <RiskBadge level={vuln.risk} />
+                    </TableCell>
+                    <TableCell>{vuln.published}</TableCell>
+                    <TableCell>{vuln.modified}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          )}
         </div>
       </TabsContent>
 
       <TabsContent value="versions">
         <div className="bg-white w-full">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-muted-foreground">Version</TableHead>
-                <TableHead className="w-[140px] text-muted-foreground">Published On</TableHead>
-                <TableHead className="w-[142px] text-muted-foreground"></TableHead>
-              </TableRow>
-            </TableHeader>
+          {versions.length === 0 ? (
+            <div className="p-8 text-center text-muted-foreground">
+              No version information available.
+            </div>
+          ) : (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-muted-foreground">
+                    Version
+                  </TableHead>
+                  <TableHead className="w-[140px] text-muted-foreground">
+                    Published On
+                  </TableHead>
+                  <TableHead className="w-[142px] text-muted-foreground"></TableHead>
+                </TableRow>
+              </TableHeader>
 
-            <TableBody>
-              <TableRow>
-                <TableCell className="flex items-center gap-2">
-                  <Badge className="rounded-sm bg-gray-100 gap-1.5 text-gray-700">
-                    0.24.0
-                  </Badge>
-                  <Badge className="rounded-sm bg-teal-100 gap-1.5 px-1.5 py-0.5 text-teal-700">
-                    Latest
-                  </Badge>
-                </TableCell>
-                <TableCell>08/10/2024</TableCell>
-                <TableCell className="text-primary flex items-center gap-2">
-                  <span className="h-2 w-px bg-border"></span>
-                  View Version
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+              <TableBody>
+                {versions.slice(0, 50).map((ver, idx) => (
+                  <TableRow key={idx}>
+                    <TableCell className="flex items-center gap-2">
+                      <Badge className="rounded-sm bg-gray-100 gap-1.5 text-gray-700">
+                        {ver.version}
+                      </Badge>
+                      {ver.isDefault && (
+                        <Badge className="rounded-sm bg-teal-100 gap-1.5 px-1.5 py-0.5 text-teal-700">
+                          Latest
+                        </Badge>
+                      )}
+                    </TableCell>
+                    <TableCell>{ver.publishedAt}</TableCell>
+                    <TableCell className="text-primary flex items-center gap-2">
+                      <span className="h-2 w-px bg-border"></span>
+                      <Link
+                        href={`/p/${ecosystem}/${packageName}/${ver.version}`}
+                      >
+                        View Version
+                      </Link>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          )}
         </div>
       </TabsContent>
 
       <TabsContent value="license">
         <div className="bg-white w-full">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-muted-foreground">License ID</TableHead>
-                <TableHead className="w-[300px] text-muted-foreground">License Name</TableHead>
-                <TableHead className="w-[400px] text-muted-foreground">Reference URL</TableHead>
-              </TableRow>
-            </TableHeader>
+          {licenses.length === 0 ? (
+            <div className="p-8 text-center text-muted-foreground">
+              No license information available.
+            </div>
+          ) : (
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-muted-foreground">
+                    License ID
+                  </TableHead>
+                  <TableHead className="w-[300px] text-muted-foreground">
+                    License Name
+                  </TableHead>
+                  <TableHead className="w-[400px] text-muted-foreground">
+                    Reference URL
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
 
-            <TableBody>
-              <TableRow>
-                <TableCell className="flex items-center gap-2">
-                  Apache-2.0
-                </TableCell>
-                <TableCell>Apache License 2.0</TableCell>
-                <TableCell>
-                  https://www.apache.org/licenses/LICENSE-2.0
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+              <TableBody>
+                {licenses.map((lic, idx) => (
+                  <TableRow key={idx}>
+                    <TableCell className="flex items-center gap-2">
+                      {lic.licenseId}
+                    </TableCell>
+                    <TableCell>{lic.name || lic.licenseId}</TableCell>
+                    <TableCell>
+                      {lic.referenceUrl ? (
+                        <a
+                          href={lic.referenceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          {lic.referenceUrl}
+                        </a>
+                      ) : (
+                        "N/A"
+                      )}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          )}
         </div>
       </TabsContent>
     </Tabs>

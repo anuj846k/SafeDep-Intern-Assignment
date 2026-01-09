@@ -1,62 +1,85 @@
-import { FaGithub } from "react-icons/fa";
-import MetricCard from "../metrics/metric-card";
-import { IoMdInformationCircleOutline } from "react-icons/io";
-import { MdOutlineBugReport } from "react-icons/md";
+import { getEcosystemIcon } from "@/lib/utils/ecosystem-icons";
 import { FiBook } from "react-icons/fi";
 import { HiGlobeAsiaAustralia } from "react-icons/hi2";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 import { IoRibbonOutline } from "react-icons/io5";
+import { MdOutlineBugReport } from "react-icons/md";
+import MetricCard from "../metrics/metric-card";
 
-const PackageHeader = () => {
+type PackageHeaderProps = {
+  name: string;
+  version: string;
+  ecosystem: string;
+  vulnerabilitiesCount: number;
+  scorecardScore?: number;
+  license?: string;
+  analyzedAt?: string;
+};
+
+const PackageHeader = ({
+  name,
+  version,
+  ecosystem,
+  vulnerabilitiesCount,
+  scorecardScore,
+  license,
+  analyzedAt,
+}: PackageHeaderProps) => {
+  const ecosystemIcon = getEcosystemIcon(ecosystem);
+
   return (
     <section className="bg-slate-50 space-y-6 pt-4 pb-5 px-5 border-b border-border">
       <div className="flex flex-col gap-2 ">
         <div className="flex items-center flex-row gap-2">
           <div className="flex h-6 w-6 items-center justify-center rounded-md border border-border">
-            <FaGithub size={16} />
+            {ecosystemIcon}
           </div>
 
           <span className="font-medium text-xl leading-7 text-[#1C2024]">
-            next@15.5.4
+            {name}@{version}
           </span>
         </div>
 
-        <div className="flex flex-col gap-2 ">
-          <span className="text-sm text-muted-foreground">
-            Analysed at{" "}
-            <span className="text-foreground">24 Oct 2025, 10:06</span>
-          </span>
-        </div>
+        {analyzedAt && (
+          <div className="flex flex-col gap-2 ">
+            <span className="text-sm text-muted-foreground">
+              Analysed at <span className="text-foreground">{analyzedAt}</span>
+            </span>
+          </div>
+        )}
 
         <div className="grid grid-cols-5 gap-2">
           <MetricCard
             icon={<IoMdInformationCircleOutline />}
             label="Version"
-            value="15.5.4"
+            value={version}
           />
 
           <MetricCard
             icon={<MdOutlineBugReport />}
             label="Vulnerabilities"
-            value="5"
-            iconClassName="text-destructive"
+            value={String(vulnerabilitiesCount)}
+            iconClassName={
+              vulnerabilitiesCount > 0 ? "text-destructive" : "text-green-500"
+            }
           />
 
           <MetricCard
             icon={<FiBook />}
             label="OpenSSF Scorecard"
-            value="9.5 / 10"
+            value={scorecardScore ? `${scorecardScore.toFixed(1)} / 10` : "N/A"}
             textColor="text-primary"
           />
 
           <MetricCard
             icon={<IoRibbonOutline />}
             label="License"
-            value="Apache-2.0"
+            value={license || "Unknown"}
           />
           <MetricCard
             icon={<HiGlobeAsiaAustralia />}
             label="Ecosystem"
-            value="Go"
+            value={ecosystem.toUpperCase()}
           />
         </div>
       </div>

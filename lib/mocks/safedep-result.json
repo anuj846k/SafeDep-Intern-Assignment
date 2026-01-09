@@ -1,0 +1,1713 @@
+{
+  "packageVersion": {
+    "package": {
+      "ecosystem": "ECOSYSTEM_PYPI",
+      "name": "requests"
+    },
+    "version": "2.28.0"
+  },
+  "insight": {
+    "dependencies": [
+      {
+        "package": {
+          "ecosystem": "ECOSYSTEM_PYPI",
+          "name": "certifi"
+        },
+        "version": "2026.1.4"
+      },
+      {
+        "package": {
+          "ecosystem": "ECOSYSTEM_PYPI",
+          "name": "charset-normalizer"
+        },
+        "version": "2.0.12"
+      },
+      {
+        "package": {
+          "ecosystem": "ECOSYSTEM_PYPI",
+          "name": "idna"
+        },
+        "version": "3.11.0"
+      },
+      {
+        "package": {
+          "ecosystem": "ECOSYSTEM_PYPI",
+          "name": "urllib3"
+        },
+        "version": "1.26.20"
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "id": {
+          "type": "VULNERABILITY_IDENTIFIER_TYPE_GHSA",
+          "value": "GHSA-9hjg-9r4m-mvj7"
+        },
+        "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+        "aliases": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_CVE",
+            "value": "CVE-2024-47081"
+          }
+        ],
+        "related": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-24q3-6wm3-783c"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-398v-hm2p-xw79"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-4754-mrr3-695h"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-578p-xq4j-24jg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-57rv-3w6v-vfm6"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-6r3c-fq5f-jjfh"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-954m-ppvf-6f35"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-99hv-7qh4-6g5w"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-9rjg-3x9h-x532"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-9w68-hrgc-76hj"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-c2r7-2566-pwm6"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-c5vr-px9j-7fpg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-cff4-qq7g-q7cr"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-cvpx-m598-wh5q"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-fxjq-g46f-7r8q"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-h2m6-v7c4-gf9v"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-hf94-r6q8-78mp"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-j4hh-xq5f-87rc"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-j4pw-wrph-m6cg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-jgvj-g2p4-w9wq"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-jmr7-vvhv-6h2m"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-mg8p-7vfh-73jf"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-mm5x-7qfp-q7fp"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-p5qm-hr59-m2mh"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-pcg9-4mrr-wqmg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-r73w-4q8h-cxgr"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-rq3q-962h-6765"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-vq42-r69c-q22r"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-xgx2-r76q-v9mw"
+          }
+        ],
+        "severities": [
+          {
+            "type": "TYPE_CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "risk": "RISK_MEDIUM"
+          }
+        ],
+        "publishedAt": "2025-06-09T19:06:08Z",
+        "modifiedAt": "2025-06-09T19:27:13.389930Z"
+      },
+      {
+        "id": {
+          "type": "VULNERABILITY_IDENTIFIER_TYPE_GHSA",
+          "value": "GHSA-9wx4-h78v-vm56"
+        },
+        "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+        "aliases": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_CVE",
+            "value": "CVE-2024-35195"
+          }
+        ],
+        "related": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-26vv-f9rg-3gr8"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-2qh2-jp77-wp2x"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-32qh-xq5g-9xq4"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-432x-3phh-56c7"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-4354-v6cq-3f5f"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-4xx2-v3vc-q5x8"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-5g3x-7m89-wx8r"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-6rf6-59qq-87jc"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-6v4c-f9mw-8ghc"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-74xp-46xv-7q3v"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-77h5-pgh2-r2fg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-8296-pxcv-4w67"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-8mx8-8v5r-99xg"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-fff7-969w-wcq5"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-hf9v-fwg4-2jvw"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-hhrg-5mf5-r2p5"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-jcgc-jpw2-xpqq"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-p79x-5pxg-f77m"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-phrh-j36c-pqjq"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-rrq3-6489-25cv"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-v263-vf6g-w8hh"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-v542-whj6-7mj4"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-vq3j-qcvx-h7px"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-whqq-jwxh-vf92"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-x395-8f45-7j43"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_CVE",
+            "value": "CVE-2024-35195"
+          }
+        ],
+        "severities": [
+          {
+            "type": "TYPE_CVSS_V3",
+            "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N",
+            "risk": "RISK_MEDIUM"
+          }
+        ],
+        "publishedAt": "2024-05-20T20:15:00Z",
+        "modifiedAt": "2024-07-15T22:12:27.987373Z"
+      },
+      {
+        "id": {
+          "type": "VULNERABILITY_IDENTIFIER_TYPE_GHSA",
+          "value": "GHSA-j8r2-6x86-q33q"
+        },
+        "summary": "Unintended leak of Proxy-Authorization header in requests",
+        "aliases": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_CVE",
+            "value": "CVE-2023-32681"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "PYSEC-2023-74"
+          }
+        ],
+        "related": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+            "value": "CGA-jw5m-ghm3-2mhw"
+          }
+        ],
+        "severities": [
+          {
+            "type": "TYPE_CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N",
+            "risk": "RISK_MEDIUM"
+          }
+        ],
+        "publishedAt": "2023-05-22T20:36:32Z",
+        "modifiedAt": "2025-02-13T19:20:45.182158Z"
+      },
+      {
+        "id": {
+          "type": "VULNERABILITY_IDENTIFIER_TYPE_UNSPECIFIED",
+          "value": "PYSEC-2023-74"
+        },
+        "summary": "",
+        "aliases": [
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_CVE",
+            "value": "CVE-2023-32681"
+          },
+          {
+            "type": "VULNERABILITY_IDENTIFIER_TYPE_GHSA",
+            "value": "GHSA-j8r2-6x86-q33q"
+          }
+        ],
+        "related": [],
+        "severities": [],
+        "publishedAt": "2023-05-26T18:15:00Z",
+        "modifiedAt": "2023-11-08T04:12:35.436175Z"
+      }
+    ],
+    "projectInsights": [
+      {
+        "project": {
+          "type": "PROJECT_SOURCE_TYPE_GITHUB",
+          "name": "github.com/psf/requests",
+          "url": "https://github.com/psf/requests"
+        },
+        "stars": "53617",
+        "forks": "9671",
+        "issues": {
+          "open": "328",
+          "closed": "0",
+          "total": "0"
+        },
+        "scorecard": {
+          "date": "seconds:1766966400",
+          "score": 7.800000190734863,
+          "repo": {
+            "name": "github.com/psf/requests",
+            "commit": "70298332899f25826e35e42f8d83425124f755a5"
+          },
+          "checks": [
+            {
+              "name": "Code-Review",
+              "score": 10,
+              "reason": "all changesets reviewed",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#code-review",
+                "description": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+              }
+            },
+            {
+              "name": "Dangerous-Workflow",
+              "score": 10,
+              "reason": "no dangerous workflow patterns detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#dangerous-workflow",
+                "description": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+              }
+            },
+            {
+              "name": "Maintained",
+              "score": 2,
+              "reason": "2 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 2",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#maintained",
+                "description": "Determines if the project is \"actively maintained\"."
+              }
+            },
+            {
+              "name": "Binary-Artifacts",
+              "score": 10,
+              "reason": "no binaries found in the repo",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#binary-artifacts",
+                "description": "Determines if the project has generated executable (binary) artifacts in the source repository."
+              }
+            },
+            {
+              "name": "Security-Policy",
+              "score": 10,
+              "reason": "security policy file detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#security-policy",
+                "description": "Determines if the project has published a security policy."
+              }
+            },
+            {
+              "name": "Token-Permissions",
+              "score": 10,
+              "reason": "GitHub workflow tokens follow principle of least privilege",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#token-permissions",
+                "description": "Determines if the project's workflows follow the principle of least privilege."
+              }
+            },
+            {
+              "name": "CII-Best-Practices",
+              "score": 0,
+              "reason": "no effort to earn an OpenSSF best practices badge detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#cii-best-practices",
+                "description": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+              }
+            },
+            {
+              "name": "Pinned-Dependencies",
+              "score": 7,
+              "reason": "dependency not pinned by hash detected -- score normalized to 7",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#pinned-dependencies",
+                "description": "Determines if the project has declared and pinned the dependencies of its build process."
+              }
+            },
+            {
+              "name": "Vulnerabilities",
+              "score": 10,
+              "reason": "0 existing vulnerabilities detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#vulnerabilities",
+                "description": "Determines if the project has open, known unfixed vulnerabilities."
+              }
+            },
+            {
+              "name": "Fuzzing",
+              "score": 10,
+              "reason": "project is fuzzed",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#fuzzing",
+                "description": "Determines if the project uses fuzzing."
+              }
+            },
+            {
+              "name": "Packaging",
+              "score": -1,
+              "reason": "packaging workflow not detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#packaging",
+                "description": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+              }
+            },
+            {
+              "name": "License",
+              "score": 10,
+              "reason": "license file detected",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#license",
+                "description": "Determines if the project has defined a license."
+              }
+            },
+            {
+              "name": "Signed-Releases",
+              "score": 0,
+              "reason": "Project has not signed or included provenance with any releases.",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#signed-releases",
+                "description": "Determines if the project cryptographically signs release artifacts."
+              }
+            },
+            {
+              "name": "Branch-Protection",
+              "score": -1,
+              "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#branch-protection",
+                "description": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+              }
+            },
+            {
+              "name": "SAST",
+              "score": 9,
+              "reason": "SAST tool detected but not run on all commits",
+              "documentation": {
+                "url": "https://github.com/ossf/scorecard/blob/525a93017816fa74238c545bdecac6af16ce00f1/docs/checks.md#sast",
+                "description": "Determines if the project uses static code analysis."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "licenses": {
+      "licenses": [
+        {
+          "licenseId": "Apache-2.0",
+          "name": "",
+          "referenceNumber": 0,
+          "deprecatedLicenseId": false,
+          "osiApproved": false,
+          "fsfApproved": false,
+          "saasCompatible": false,
+          "commercialUseAllowed": false,
+          "compatibility": {},
+          "referenceUrl": "",
+          "detailsUrl": ""
+        }
+      ]
+    },
+    "dependsOn": [],
+    "packagePublishedAt": "2022-06-09T14:44:34Z",
+    "deprecated": false,
+    "defaultVersion": false,
+    "registries": [
+      "https://pypi.org/simple"
+    ],
+    "slsaProvenances": [],
+    "availableVersions": [
+      {
+        "version": "0.10.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-01-22T05:08:17Z"
+      },
+      {
+        "version": "0.10.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-01-23T08:22:52Z"
+      },
+      {
+        "version": "0.10.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-02-15T09:48:52Z"
+      },
+      {
+        "version": "0.10.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-02-20T20:10:57Z"
+      },
+      {
+        "version": "0.10.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-02-20T22:21:31Z"
+      },
+      {
+        "version": "0.10.6",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-02-26T05:17:54Z"
+      },
+      {
+        "version": "0.10.7",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-03-08T01:50:58Z"
+      },
+      {
+        "version": "0.10.8",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-03-09T17:59:54Z"
+      },
+      {
+        "version": "0.11.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-03-31T05:47:56Z"
+      },
+      {
+        "version": "0.11.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-04-23T04:29:36Z"
+      },
+      {
+        "version": "0.12.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-05-03T01:18:47Z"
+      },
+      {
+        "version": "0.12.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-05-08T07:21:59Z"
+      },
+      {
+        "version": "0.13.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-05-30T02:54:18Z"
+      },
+      {
+        "version": "0.13.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-06-08T04:22:28Z"
+      },
+      {
+        "version": "0.13.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-06-29T02:37:41Z"
+      },
+      {
+        "version": "0.13.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-07-12T23:20:43Z"
+      },
+      {
+        "version": "0.13.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-07-27T08:22:09Z"
+      },
+      {
+        "version": "0.13.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-07-27T09:23:41Z"
+      },
+      {
+        "version": "0.13.6",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-08-06T08:46:22Z"
+      },
+      {
+        "version": "0.13.7",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-08-19T00:47:48Z"
+      },
+      {
+        "version": "0.13.8",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-08-20T15:24:42Z"
+      },
+      {
+        "version": "0.13.9",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-08-25T15:26:50Z"
+      },
+      {
+        "version": "0.14.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-09-02T08:50:39Z"
+      },
+      {
+        "version": "0.14.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-10-01T17:30:05Z"
+      },
+      {
+        "version": "0.14.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-10-27T15:08:51Z"
+      },
+      {
+        "version": "0.2.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-14T08:49:42Z"
+      },
+      {
+        "version": "0.2.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-14T16:38:12Z"
+      },
+      {
+        "version": "0.2.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-14T18:58:40Z"
+      },
+      {
+        "version": "0.2.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-15T15:47:29Z"
+      },
+      {
+        "version": "0.2.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-19T07:03:14Z"
+      },
+      {
+        "version": "0.3.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-02-25T14:58:38Z"
+      },
+      {
+        "version": "0.3.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-04-01T20:55:03Z"
+      },
+      {
+        "version": "0.3.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-04-15T23:30:50Z"
+      },
+      {
+        "version": "0.3.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-05-12T10:03:24Z"
+      },
+      {
+        "version": "0.3.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-05-14T20:30:44Z"
+      },
+      {
+        "version": "0.4.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-05-15T05:58:43Z"
+      },
+      {
+        "version": "0.4.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-05-25T18:54:05Z"
+      },
+      {
+        "version": "0.5.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-06-22T04:44:39Z"
+      },
+      {
+        "version": "0.5.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-07-24T05:01:45Z"
+      },
+      {
+        "version": "0.6.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-08-17T10:33:05Z"
+      },
+      {
+        "version": "0.6.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-08-21T00:25:37Z"
+      },
+      {
+        "version": "0.6.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-09T13:12:45Z"
+      },
+      {
+        "version": "0.6.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-14T03:35:13Z"
+      },
+      {
+        "version": "0.6.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-14T04:23:31Z"
+      },
+      {
+        "version": "0.6.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-19T07:30:59Z"
+      },
+      {
+        "version": "0.6.6",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-19T09:39:56Z"
+      },
+      {
+        "version": "0.7.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-23T03:33:24Z"
+      },
+      {
+        "version": "0.7.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-23T21:19:22Z"
+      },
+      {
+        "version": "0.7.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-23T21:40:37Z"
+      },
+      {
+        "version": "0.7.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-23T23:04:13Z"
+      },
+      {
+        "version": "0.7.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-10-27T00:36:25Z"
+      },
+      {
+        "version": "0.7.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-05T04:32:37Z"
+      },
+      {
+        "version": "0.7.6",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-07T20:19:31Z"
+      },
+      {
+        "version": "0.8.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-13T06:52:10Z"
+      },
+      {
+        "version": "0.8.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-15T16:01:47Z"
+      },
+      {
+        "version": "0.8.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-19T22:28:31Z"
+      },
+      {
+        "version": "0.8.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-11-27T16:44:51Z"
+      },
+      {
+        "version": "0.8.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-11T17:40:28Z"
+      },
+      {
+        "version": "0.8.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-14T16:43:21Z"
+      },
+      {
+        "version": "0.8.6",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-19T01:18:29Z"
+      },
+      {
+        "version": "0.8.7",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-24T09:18:54Z"
+      },
+      {
+        "version": "0.8.8",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-28T09:55:45Z"
+      },
+      {
+        "version": "0.8.9",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-28T10:34:17Z"
+      },
+      {
+        "version": "0.9.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2011-12-28T10:51:35Z"
+      },
+      {
+        "version": "0.9.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-01-06T07:11:02Z"
+      },
+      {
+        "version": "0.9.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-01-19T03:39:58Z"
+      },
+      {
+        "version": "0.9.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-01-19T16:51:33Z"
+      },
+      {
+        "version": "1.0.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-12-17T15:00:05Z"
+      },
+      {
+        "version": "1.0.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-12-17T18:53:51Z"
+      },
+      {
+        "version": "1.0.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-12-17T19:04:31Z"
+      },
+      {
+        "version": "1.0.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-12-18T09:51:12Z"
+      },
+      {
+        "version": "1.0.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2012-12-23T07:45:10Z"
+      },
+      {
+        "version": "1.1.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-01-10T07:13:41Z"
+      },
+      {
+        "version": "1.2.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-03-31T05:28:47Z"
+      },
+      {
+        "version": "1.2.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-05-20T20:11:09Z"
+      },
+      {
+        "version": "1.2.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-05-21T21:44:44Z"
+      },
+      {
+        "version": "1.2.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-05-25T16:48:36Z"
+      },
+      {
+        "version": "2.0.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-11-15T19:09:51Z"
+      },
+      {
+        "version": "2.0.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-11-15T19:12:20Z"
+      },
+      {
+        "version": "2.1.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2013-12-05T22:51:41Z"
+      },
+      {
+        "version": "2.10.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-04-29T22:12:39Z"
+      },
+      {
+        "version": "2.11.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-08-08T15:07:35Z"
+      },
+      {
+        "version": "2.11.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-08-17T20:04:30Z"
+      },
+      {
+        "version": "2.12.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-11-15T10:32:00Z"
+      },
+      {
+        "version": "2.12.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-11-16T10:45:37Z"
+      },
+      {
+        "version": "2.12.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-11-30T12:39:31Z"
+      },
+      {
+        "version": "2.12.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-12-01T10:49:02Z"
+      },
+      {
+        "version": "2.12.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-12-14T11:39:35Z"
+      },
+      {
+        "version": "2.12.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-01-18T12:43:08Z"
+      },
+      {
+        "version": "2.13.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-01-24T12:53:25Z"
+      },
+      {
+        "version": "2.14.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-09T15:45:03Z"
+      },
+      {
+        "version": "2.14.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-09T19:00:26Z"
+      },
+      {
+        "version": "2.14.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-10T14:05:39Z"
+      },
+      {
+        "version": "2.15.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T02:14:19Z"
+      },
+      {
+        "version": "2.16.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T03:45:40Z"
+      },
+      {
+        "version": "2.16.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T13:43:53Z"
+      },
+      {
+        "version": "2.16.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T14:53:09Z"
+      },
+      {
+        "version": "2.16.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T16:24:47Z"
+      },
+      {
+        "version": "2.16.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-27T21:17:38Z"
+      },
+      {
+        "version": "2.16.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-28T04:35:44Z"
+      },
+      {
+        "version": "2.17.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-29T17:24:35Z"
+      },
+      {
+        "version": "2.17.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-29T19:59:39Z"
+      },
+      {
+        "version": "2.17.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-29T21:33:32Z"
+      },
+      {
+        "version": "2.17.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-05-29T21:53:19Z"
+      },
+      {
+        "version": "2.18.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-06-14T15:44:35Z"
+      },
+      {
+        "version": "2.18.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-06-14T17:51:25Z"
+      },
+      {
+        "version": "2.18.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-07-25T15:23:15Z"
+      },
+      {
+        "version": "2.18.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-08-02T13:23:31Z"
+      },
+      {
+        "version": "2.18.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2017-08-15T13:23:43Z"
+      },
+      {
+        "version": "2.19.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2018-06-12T14:46:15Z"
+      },
+      {
+        "version": "2.19.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2018-06-14T13:40:38Z"
+      },
+      {
+        "version": "2.2.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-01-09T19:33:37Z"
+      },
+      {
+        "version": "2.2.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-01-23T18:26:15Z"
+      },
+      {
+        "version": "2.20.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2018-10-18T15:46:10Z"
+      },
+      {
+        "version": "2.20.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2018-11-08T17:20:29Z"
+      },
+      {
+        "version": "2.21.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2018-12-10T15:40:08Z"
+      },
+      {
+        "version": "2.22.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2019-05-16T14:37:14Z"
+      },
+      {
+        "version": "2.23.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2020-02-19T18:50:59Z"
+      },
+      {
+        "version": "2.23.0-py2.7",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false
+      },
+      {
+        "version": "2.24.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2020-06-17T16:30:08Z"
+      },
+      {
+        "version": "2.25.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2020-11-11T20:05:15Z"
+      },
+      {
+        "version": "2.25.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2020-12-16T19:38:34Z"
+      },
+      {
+        "version": "2.26.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2021-07-13T14:55:06Z"
+      },
+      {
+        "version": "2.27.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2022-01-03T15:09:26Z"
+      },
+      {
+        "version": "2.27.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2022-01-05T15:40:49Z"
+      },
+      {
+        "version": "2.28.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2022-06-09T14:44:34Z"
+      },
+      {
+        "version": "2.28.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2022-06-29T15:13:40Z"
+      },
+      {
+        "version": "2.28.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2023-01-12T16:24:52Z"
+      },
+      {
+        "version": "2.29.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2023-04-26T15:24:31Z"
+      },
+      {
+        "version": "2.3.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-05-16T17:57:05Z"
+      },
+      {
+        "version": "2.30.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2023-05-03T15:44:03Z"
+      },
+      {
+        "version": "2.31.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2023-05-22T15:12:42Z"
+      },
+      {
+        "version": "2.32.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2024-05-20T16:08:19Z"
+      },
+      {
+        "version": "2.32.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2024-05-20T22:08:45Z"
+      },
+      {
+        "version": "2.32.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2024-05-21T18:51:29Z"
+      },
+      {
+        "version": "2.32.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2024-05-29T15:37:47Z"
+      },
+      {
+        "version": "2.32.4",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2025-06-09T16:43:05Z"
+      },
+      {
+        "version": "2.32.5",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": true,
+        "publishedAt": "2025-08-18T20:46:00Z"
+      },
+      {
+        "version": "2.4.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-08-29T14:32:48Z"
+      },
+      {
+        "version": "2.4.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-09-09T16:35:12Z"
+      },
+      {
+        "version": "2.4.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-10-05T17:15:53Z"
+      },
+      {
+        "version": "2.4.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-10-06T09:44:49Z"
+      },
+      {
+        "version": "2.5.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-12-01T23:27:51Z"
+      },
+      {
+        "version": "2.5.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2014-12-23T17:55:59Z"
+      },
+      {
+        "version": "2.5.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-02-23T22:37:39Z"
+      },
+      {
+        "version": "2.5.3",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-02-24T16:33:49Z"
+      },
+      {
+        "version": "2.6.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-03-14T16:44:37Z"
+      },
+      {
+        "version": "2.6.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-04-23T02:27:04Z"
+      },
+      {
+        "version": "2.6.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-04-23T16:30:52Z"
+      },
+      {
+        "version": "2.7.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-05-03T15:01:28Z"
+      },
+      {
+        "version": "2.8.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-10-06T14:47:57Z"
+      },
+      {
+        "version": "2.8.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-10-13T12:56:41Z"
+      },
+      {
+        "version": "2.9.0",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-12-15T15:30:34Z"
+      },
+      {
+        "version": "2.9.1",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2015-12-21T14:55:10Z"
+      },
+      {
+        "version": "2.9.2",
+        "purl": "",
+        "deprecated": false,
+        "defaultVersion": false,
+        "publishedAt": "2016-04-29T21:57:23Z"
+      }
+    ],
+    "dependencyGraph": {
+      "dependencies": [
+        {
+          "packageVersion": {
+            "package": {
+              "ecosystem": "ECOSYSTEM_PYPI",
+              "name": "requests"
+            },
+            "version": "2.28.0"
+          },
+          "relation": "RELATION_SELF"
+        },
+        {
+          "packageVersion": {
+            "package": {
+              "ecosystem": "ECOSYSTEM_PYPI",
+              "name": "certifi"
+            },
+            "version": "2026.1.4"
+          },
+          "relation": "RELATION_DIRECT"
+        },
+        {
+          "packageVersion": {
+            "package": {
+              "ecosystem": "ECOSYSTEM_PYPI",
+              "name": "charset-normalizer"
+            },
+            "version": "2.0.12"
+          },
+          "relation": "RELATION_DIRECT"
+        },
+        {
+          "packageVersion": {
+            "package": {
+              "ecosystem": "ECOSYSTEM_PYPI",
+              "name": "idna"
+            },
+            "version": "3.11.0"
+          },
+          "relation": "RELATION_DIRECT"
+        },
+        {
+          "packageVersion": {
+            "package": {
+              "ecosystem": "ECOSYSTEM_PYPI",
+              "name": "urllib3"
+            },
+            "version": "1.26.20"
+          },
+          "relation": "RELATION_DIRECT"
+        }
+      ],
+      "dependencyRelations": [
+        {
+          "from": 0,
+          "to": 1,
+          "requirement": ">=2017.4.17"
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "requirement": "~=2.0.0"
+        },
+        {
+          "from": 0,
+          "to": 3,
+          "requirement": "<4,>=2.5"
+        },
+        {
+          "from": 0,
+          "to": 4,
+          "requirement": "<1.27,>=1.21.1"
+        }
+      ]
+    },
+    "downloadCount": "0"
+  }
+}
